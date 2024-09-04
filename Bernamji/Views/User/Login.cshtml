@@ -1,0 +1,84 @@
+﻿@model Bernamji.Application.Resources.UserResource
+
+<h1>Login</h1>
+
+@using(Html.BeginForm("", "", FormMethod.Post, new { id = "loginForm" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    
+    <div class="form-group mt-3">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="button" onclick="Login()" class="btn btn-outline-primary">Login</button>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        async function Login() {
+            if (!$("#loginForm").valid()) {
+                return;
+            }
+
+            const user = getUserCredentials();
+
+            try {
+                const response = await sendLoginRequest(user);
+                handleLoginSuccess(response);
+            } catch (error) {
+                handleLoginFailure(error);
+            }
+        }
+
+        function getUserCredentials() {
+            return {
+                username: $("#UserName").val(),
+                password: $("#Password").val()
+            };
+        }
+
+        async function sendLoginRequest(user) {
+            return await $.ajax({
+                url: 'api/user/Login',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(user),
+                dataType: 'json'
+            });
+        }
+
+        function handleLoginSuccess(response) {
+            Swal.fire({
+                title: 'Login Successful',
+                text: response.Message,
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.reload();
+            });
+        }
+
+        function handleLoginFailure(error) {
+            Swal.fire({
+                title: 'Login Failed',
+                text: error.responseJSON ? error.responseJSON.message : 'An error occurred during login.',
+                icon: 'error',
+                confirmButtonText: 'Try Again'
+            });
+        }
+    </script>
+}

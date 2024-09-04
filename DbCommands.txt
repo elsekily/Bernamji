@@ -1,0 +1,5 @@
+dotnet ef migrations add initialModel --project .\Bernamji.DataAccess.csproj  --output-dir ./Persistence/Migrations --startup-project ..\Bernamji\Bernamji.csproj
+dotnet ef database update --project .\Bernamji.DataAccess.csproj --startup-project ..\Bernamji\Bernamji.csproj
+
+
+fnTQ1A2wnjrNeTRA7AAjbcbGyMXiPoA8ZVL4K++nzvbWFGD4IlVQXy3mddY8G//qY40Vtd/DSvrVxF3YeIRjaw==6vMv275M62+gVXRgXs21lQ==
