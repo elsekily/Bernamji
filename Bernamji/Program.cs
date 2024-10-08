@@ -1,12 +1,7 @@
-using Bernamji.Application;
-using Bernamji.DataAccess;
-using Bernamji.DataAccess.Persistence;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDataAccess(builder.Configuration).AddApplication();
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddControllers();
 
@@ -31,8 +26,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=User}/{action=Login}/{id?}");
 
-
-
-await AutomatedMigration.MigrateAsync(app.Services);
 
 app.Run();

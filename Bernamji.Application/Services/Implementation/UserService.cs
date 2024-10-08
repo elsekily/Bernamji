@@ -1,7 +1,7 @@
 ﻿using bernamji.Core.Entities;
-using Bernamji.Application.Resources;
 using Bernamji.Application.Services.Core;
 using Bernamji.DataAccess.Repositories.Core;
+using Bernamji.DTOs.DTOs;
 using Bernamji.Shared.Services.Core;
 using System;
 using System.Collections.Generic;

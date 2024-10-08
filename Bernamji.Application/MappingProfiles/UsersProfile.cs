@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using bernamji.Core.Entities;
-using Bernamji.Application.Resources;
+using Bernamji.DTOs.DTOs;
 
 namespace Bernamji.Application.MappingProfiles;
 
@@ -8,7 +8,5 @@ public class UsersProfile : Profile
 {
     public UsersProfile()
     {
-        CreateMap<User, UserResource>();
-        //CreateMap(typeof(QueryResult<>), typeof(QueryResultResource<>));
     }
 }

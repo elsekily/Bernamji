@@ -1,5 +1,5 @@
 ﻿using bernamji.Core.Entities;
-using Bernamji.Application.Resources;
+using Bernamji.DTOs.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

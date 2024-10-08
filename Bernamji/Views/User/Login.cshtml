@@ -1,4 +1,4 @@
-﻿@model Bernamji.Application.Resources.UserResource
+﻿@model Bernamji.DTOs.DTOs.UserResource
 
 <h1>Login</h1>
 
@@ -53,7 +53,7 @@
 
         async function sendLoginRequest(user) {
             return await $.ajax({
-                url: 'api/user/Login',
+                url: 'http://localhost:5090/api/user/Login',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(user),

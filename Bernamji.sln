@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bernamji.DataAccess", "Bern
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bernamji.Application", "Bernamji.Application\Bernamji.Application.csproj", "{D5D091ED-C9E7-450D-A953-20F37130D22D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bernamji.Shared", "Bernamji.Shared\Bernamji.Shared.csproj", "{E753EE91-95F3-4911-93FA-6B9C192CE154}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bernamji.Shared", "Bernamji.Shared\Bernamji.Shared.csproj", "{E753EE91-95F3-4911-93FA-6B9C192CE154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bernamji.API", "Bernamji.API\Bernamji.API.csproj", "{22122E98-1EE3-4F7B-891B-6E3DDA160372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bernamji.DTOs", "Bernamji.DTOs\Bernamji.DTOs.csproj", "{F88675DD-C34F-4502-B124-4EDF56CC5C2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{E753EE91-95F3-4911-93FA-6B9C192CE154}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E753EE91-95F3-4911-93FA-6B9C192CE154}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E753EE91-95F3-4911-93FA-6B9C192CE154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22122E98-1EE3-4F7B-891B-6E3DDA160372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22122E98-1EE3-4F7B-891B-6E3DDA160372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22122E98-1EE3-4F7B-891B-6E3DDA160372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22122E98-1EE3-4F7B-891B-6E3DDA160372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88675DD-C34F-4502-B124-4EDF56CC5C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88675DD-C34F-4502-B124-4EDF56CC5C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88675DD-C34F-4502-B124-4EDF56CC5C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88675DD-C34F-4502-B124-4EDF56CC5C2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

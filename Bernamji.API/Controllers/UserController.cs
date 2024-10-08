@@ -1,10 +1,8 @@
-﻿using Bernamji.Application.Resources;
 using Bernamji.Application.Services.Core;
-using Bernamji.Application.Services.Implementation;
-using Microsoft.AspNetCore.Http;
+using Bernamji.DTOs.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bernamji.Controllers.API;
+namespace Bernamji.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class UserController : ControllerBase
@@ -17,7 +15,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody]UserResource user)
+    public async Task<IActionResult> Login([FromBody] UserResource user)
     {
         if (user == null)
             return BadRequest();
@@ -28,5 +26,11 @@ public class UserController : ControllerBase
             return Unauthorized(result);
 
         return Ok(result);
+    }
+
+    [HttpPost("Test")]
+    public async Task<IActionResult> Test([FromBody] TestResource test)
+    {
+        return Ok(test);
     }
 }

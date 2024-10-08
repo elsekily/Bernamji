@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Bernamji.DataAccess\Bernamji.DataAccess.csproj" />
     <ProjectReference Include="..\Bernamji.Shared\Bernamji.Shared.csproj" />
+	<ProjectReference Include="..\Bernamji.DTOs\Bernamji.DTOs.csproj" />
   </ItemGroup>
 
 

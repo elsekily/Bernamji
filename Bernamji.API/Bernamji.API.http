@@ -1,0 +1,6 @@
+@Bernamji.API_HostAddress = http://localhost:5090
+
+GET {{Bernamji.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

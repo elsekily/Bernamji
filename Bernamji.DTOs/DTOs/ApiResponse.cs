@@ -1,4 +1,4 @@
-﻿namespace Bernamji.Application.Resources;
+﻿namespace Bernamji.DTOs.DTOs;
 
 public class ApiResponse
 {
@@ -7,10 +7,10 @@ public class ApiResponse
 
     public ApiResponse()
     {
-        
+
     }
     public ApiResponse(bool isSuccess, string message)
-    {  
+    {
         IsSuccess = isSuccess;
         Message = message;
     }
